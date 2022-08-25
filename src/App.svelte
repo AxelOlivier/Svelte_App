@@ -1,18 +1,17 @@
 <script>
-  import CardList from './components/Card/CardList.svelte';
-  import SportPage from './components/SportInfo/SportPage.svelte';
+  import SportPage from './containers/SportPage/SportPage.svelte';
+  import HomePage from './containers/HomePage/HomePage.svelte';
 
   import {Router, Route} from 'svelte-routing';
 
   export let url = '';
 </script>
 
-<main class="container">
+<main>
   <Router {url}>
-    <Route path="/" component={CardList}><CardList /></Route>
-    <Route path="/sports" component={CardList}><CardList /></Route>
     <Route path="/sports/:id" let:params>
       <SportPage idSport={params.id} />
     </Route>
+    <Route path="/" component={HomePage}><HomePage /></Route>
   </Router>
 </main>

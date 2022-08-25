@@ -5,9 +5,11 @@
 <style>
   .card {
     position: relative;
-    display: flex;
     width: 350px;
     height: 350px;
+    display: flex;
+    color: black;
+    flex-direction: column;
     background-color: var(--secondaryColor);
     padding: 10px 10px;
     border-radius: 15px;

@@ -1,9 +1,9 @@
 import Api from '../../services/Api';
 
-export const CardController = {
+export const HomeController = {
   getSportList: () =>
     new Promise((success, error) => {
-      Api.get('/sports?parents_only=true&has_icon=true&limit=10')
+      Api.get('/sports?parents_only=true&has_icon=true')
         .then(res => {
           const sportsList = [...res.data].sort(() => 0.5 - Math.random());
           const newSportsList = sportsList.slice(0, 8);
